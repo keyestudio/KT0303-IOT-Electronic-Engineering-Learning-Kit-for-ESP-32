@@ -8,11 +8,15 @@ Based on ESP32 development board, this kit is designed for electronics enthusias
 
 **Features:**
 
-1. **Comprehensive coverage of core Iot technologies**——master ESP32 development from basic electronics to WiFi/MQTT remote communication.
-2. **20+ sensors and actuators**——include environment monitoring (temperature, flame, light), human-computer interaction (button, joystick, RFID), executive control (motor, servo, water pump), etc.
-3. **Step-by-step learning**——Basics → Comprehension →IoT, suitable for learners of different levels.
-4. **Real case of IoT**——Provide practical projects such as remote watering, fish tank and greenhouse monitoring.
-5. **Open source code with detailed tutorials**——Complete sample program, circuit diagram and graphic tutorial reduce the learning threshold.
+**Comprehensive coverage of core Iot technologies**——master ESP32 development from basic electronics to WiFi/MQTT remote communication.
+
+**20+ sensors and actuators**——include environment monitoring (temperature, flame, light), human-computer interaction (button, joystick, RFID), executive control (motor, servo, water pump), etc.
+
+**Step-by-step learning**——Basics → Comprehension →IoT, suitable for learners of different levels.
+
+**Real case of IoT**——Provide practical projects such as remote watering, fish tank and greenhouse monitoring.
+
+**Open source code with detailed tutorials**——Complete sample program, circuit diagram and graphic tutorial reduce the learning threshold.
 
 Whether you’re a student, an engineer, or a DIY enthusiast, you can get a quick start on ESP32 development and build your own smart hardware projects with this kit!
 
@@ -105,9 +109,9 @@ ESP32 main control board integrates ESP32-WROOM-32 module and is a universal WIF
 
 | GPIO |   Input   | Output | Functions                                                    |
 | :--: | :-------: | :----: | :----------------------------------------------------------- |
-|  0   | pulled up |   OK   | Output PWM signal when power on. <span style="color:red;">Must be LOW to enter burn mode.</span> |
+|  0   | pulled up |   OK   | Output PWM signal when power on. <br /><span style="color:red;">It must be LOW to enter the programming mode.</span> |
 |  1   |  TX pin   |   OK   | Power-on debug output.                                       |
-|  2   |    OK     |   OK   | Connect to the onboard LED. <span style="color:red;">Must be hang or low to enter burn mode.</span> |
+|  2   |    OK     |   OK   | Connect to the onboard LED.<br /> <span style="color:red;">It must be left floating or set to a low level to enter the programming mode.</span> |
 |  3   |    OK     | RX pin | Be high when power on.                                       |
 |  4   |    OK     |   OK   |                                                              |
 |  5   |    OK     |   OK   | Output PWM signal at start-up and bind pins.                 |
@@ -311,6 +315,10 @@ Open Arduino IDE and click “Tools” → “Board”. But we cannot find ESP32
 Open Arduino IDE.
 
 Click “**File → Preferences**”, add the link `https://espressif.github.io/arduino-esp32/package_esp32_index.json` in Additional boards manager URLs and click **OK**.
+
+```c
+https://espressif.github.io/arduino-esp32/package_esp32_index.json
+```
 
 ![a31](./media/a31.png)
 
